@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Exercises</title>
+    <style>
+        .eventCard { border: 1px solid #ccc; padding: 10px; margin: 10px; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Exercises</h1>
+    
+    <label>Filter by Category:</label>
+    <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="music">Music</option>
+        <option value="tech">Tech</option>
+    </select>
+    
+    <br><br>
+    <label>Search by Name:</label>
+    <input type="text" id="searchInput">
+
+    <div id="eventsContainer">
+        <!-- Events will be rendered here -->
+    </div>
+
+    <!-- Forms -->
+    <form id="regForm">
+        <input type="text" name="userName" placeholder="Your Name" required>
+        <input type="email" name="userEmail" placeholder="Your Email" required>
+        <button type="submit" id="registerBtn">Register</button>
+        <span id="formMsg"></span>
+    </form>
+
+    <!-- 14. jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

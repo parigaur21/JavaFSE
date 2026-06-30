@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Community Event Portal</title>
+    <style>
+        /* CSS for HTML5 Exercises */
+        #welcomeBanner {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+        }
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        .event-img {
+            border: 2px solid black;
+            width: 150px;
+        }
+        form {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="help.html" target="_blank">Help</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <section id="home">
+            <div id="welcomeBanner">
+                <h1>Welcome to the Portal</h1>
+                <p>Enjoy our <span style="color: red; font-weight: bold;">Special Offer</span>!</p>
+            </div>
+        </section>
+
+        <section id="events">
+            <h2 class="highlight">Past Events Gallery</h2>
+            <table>
+                <tr>
+                    <td>
+                        <img src="event1.jpg" alt="Event 1" title="Community Meetup" class="event-img">
+                        <p>Community Meetup</p>
+                    </td>
+                    <td>
+                        <img src="event2.jpg" alt="Event 2" title="Tech Talk" class="event-img">
+                        <p>Tech Talk</p>
+                    </td>
+                    <td>
+                        <img src="event3.jpg" alt="Event 3" title="Workshop" class="event-img">
+                        <p>Workshop</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="event4.jpg" alt="Event 4" title="Festival" class="event-img" ondblclick="this.style.width='300px'">
+                        <p>Festival</p>
+                    </td>
+                    <td>
+                        <img src="event5.jpg" alt="Event 5" title="Concert" class="event-img">
+                        <p>Concert</p>
+                    </td>
+                    <td>
+                        <img src="event6.jpg" alt="Event 6" title="Charity" class="event-img">
+                        <p>Charity</p>
+                    </td>
+                </tr>
+            </table>
+
+            <h2 class="highlight">Event Registration</h2>
+            <form id="regForm">
+                <label>Name: <input type="text" name="name" required autofocus placeholder="John Doe"></label><br><br>
+                <label>Email: <input type="email" name="email" required placeholder="john@example.com"></label><br><br>
+                <label>Date: <input type="date" name="date" required></label><br><br>
+                <label>Phone: <input type="tel" name="phone" onblur="if(this.value.length < 10) alert('Invalid phone')"></label><br><br>
+                <label>Event Type: 
+                    <select name="eventType" onchange="document.getElementById('fee').textContent = 'Fee: $10'">
+                        <option value="workshop">Workshop</option>
+                        <option value="meetup">Meetup</option>
+                    </select>
+                </label>
+                <span id="fee"></span><br><br>
+                <label>Message:<br>
+                    <textarea name="message" onkeyup="document.getElementById('charCount').textContent = this.value.length + ' chars'"></textarea>
+                </label>
+                <span id="charCount">0 chars</span><br><br>
+                <button type="button" onclick="document.getElementById('outMsg').textContent='Confirmed!';">Register</button>
+                <output id="outMsg"></output>
+            </form>
+            
+            <h2>Video Invite</h2>
+            <video width="320" height="240" controls oncanplay="alert('Video ready to play')">
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <h2>Geolocation</h2>
+            <button onclick="navigator.geolocation.getCurrentPosition(p => alert(p.coords.latitude + ',' + p.coords.longitude), e => alert(e.message), {enableHighAccuracy: true})">Find Nearby Events</button>
+            
+            <h2>Preferences</h2>
+            <button onclick="localStorage.setItem('prefEvent', 'Meetup'); alert('Saved in localStorage');">Save Pref</button>
+            <button onclick="localStorage.clear(); sessionStorage.clear(); alert('Cleared');">Clear Preferences</button>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Local Community Event Portal</p>
+    </footer>
+
+    <script>
+        window.onbeforeunload = function() {
+            return "Are you sure you want to leave with unfinished form?";
+        };
+    </script>
+</body>
+</html>

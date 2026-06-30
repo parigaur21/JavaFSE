@@ -1,4 +1,3 @@
-
 /**
  * Product class representing a product on the e-commerce platform.
  * 

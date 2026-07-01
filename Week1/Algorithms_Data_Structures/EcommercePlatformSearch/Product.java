@@ -6,7 +6,7 @@
  * - productName : Name of the product
  * - category    : Category the product belongs to
  */
-public class Product implements Comparable<Product> {
+public class Product {
 
     private int productId;
     private String productName;
@@ -42,14 +42,6 @@ public class Product implements Comparable<Product> {
 
     public void setCategory(String category) {
         this.category = category;
-    }
-
-    /**
-     * Implements Comparable to allow sorting by productId for binary search.
-     */
-    @Override
-    public int compareTo(Product other) {
-        return Integer.compare(this.productId, other.productId);
     }
 
     @Override

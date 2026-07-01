@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context
+                            http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- Define BookRepository bean (Exercise 1) -->
+    <!-- Exercise 1: Configuring a Basic Spring Application -->
+    <!-- Exercise 5: Configuring the Spring IoC Container -->
+    <!-- Enable component scanning for annotation-based config -->
+    <context:component-scan base-package="com.library" />
+
+    <!-- Define BookRepository bean -->
     <bean id="bookRepository" class="com.library.repository.BookRepository" />
 
-    <!-- Define BookService bean and inject BookRepository (Exercise 1 & 2) -->
-    <bean id="bookService" class="com.library.service.BookService">
+    <!-- Exercise 7: Constructor Injection -->
+    <bean id="bookServiceConstructor" class="com.library.service.BookService">
+        <constructor-arg ref="bookRepository" />
+    </bean>
+
+    <!-- Exercise 7: Setter Injection -->
+    <bean id="bookServiceSetter" class="com.library.service.BookService">
         <property name="bookRepository" ref="bookRepository" />
     </bean>
 

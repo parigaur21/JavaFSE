@@ -15,7 +15,7 @@ public class DepartmentService {
 
     @Transactional
     public Department get(int id) {
-        return departmentRepository.findById(id).get();
+        return departmentRepository.findById(id).orElse(null);
     }
 
     @Transactional

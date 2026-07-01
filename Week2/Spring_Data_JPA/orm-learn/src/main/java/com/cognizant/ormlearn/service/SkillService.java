@@ -15,7 +15,7 @@ public class SkillService {
 
     @Transactional
     public Skill get(int id) {
-        return skillRepository.findById(id).get();
+        return skillRepository.findById(id).orElse(null);
     }
 
     @Transactional

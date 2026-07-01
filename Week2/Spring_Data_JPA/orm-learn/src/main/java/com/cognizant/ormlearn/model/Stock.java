@@ -17,6 +17,7 @@ public class Stock {
     private String code;
 
     @Column(name="st_date")
+    @Temporal(TemporalType.DATE)
     private Date date;
 
     @Column(name="st_open")

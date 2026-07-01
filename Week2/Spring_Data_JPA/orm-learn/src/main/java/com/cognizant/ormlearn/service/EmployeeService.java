@@ -16,7 +16,7 @@ public class EmployeeService {
 
     @Transactional
     public Employee get(int id) {
-        return employeeRepository.findById(id).get();
+        return employeeRepository.findById(id).orElse(null);
     }
 
     @Transactional
@@ -30,7 +30,7 @@ public class EmployeeService {
     }
 
     @Transactional
-    public double getAverageSalary(int departmentId) {
+    public Double getAverageSalary(int departmentId) {
         return employeeRepository.getAverageSalary(departmentId);
     }
 

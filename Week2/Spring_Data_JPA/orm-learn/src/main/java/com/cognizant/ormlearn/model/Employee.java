@@ -23,6 +23,7 @@ public class Employee {
     private boolean permanent;
 
     @Column(name="em_date_of_birth")
+    @Temporal(TemporalType.DATE)
     private Date dateOfBirth;
 
     @ManyToOne

@@ -1,5 +1,6 @@
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Test class for the E-commerce Platform Search Function.
@@ -67,7 +68,7 @@ public class SearchTest {
 
         // --- Step 2: Create a sorted copy for Binary Search ---
         Product[] productsSorted = Arrays.copyOf(productsUnsorted, productsUnsorted.length);
-        Arrays.sort(productsSorted); // Sorts by productId using Comparable
+        Arrays.sort(productsSorted, Comparator.comparingInt(Product::getProductId)); // Sorts by productId
 
         System.out.println("--- Products (Unsorted - for Linear Search) ---");
         for (Product p : productsUnsorted) {

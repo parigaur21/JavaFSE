@@ -5,9 +5,24 @@ import com.library.repository.BookRepository;
 public class BookService {
     private BookRepository bookRepository;
 
-    // Setter method for Dependency Injection (Exercise 2)
+    // Constructor Injection (Exercise 7 - Constructor Injection)
+    public BookService(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+        System.out.println("BookService: Constructor Injection used");
+    }
+
+    // Default constructor (needed for setter injection scenario)
+    public BookService() {
+    }
+
+    // Setter Injection (Exercise 7 - Setter Injection)
     public void setBookRepository(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
+        System.out.println("BookService: Setter Injection used");
+    }
+
+    public BookRepository getBookRepository() {
+        return bookRepository;
     }
 
     public void performService() {
@@ -15,7 +30,7 @@ public class BookService {
         if (bookRepository != null) {
             bookRepository.performAction();
         } else {
-            System.out.println("BookRepository is null!");
+            System.out.println("BookRepository is null - no injection occurred!");
         }
     }
 }

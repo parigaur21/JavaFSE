@@ -1,6 +1,5 @@
 package com.example.EmployeeManagementSystem.controller;
 
-import com.example.EmployeeManagementSystem.entity.Department;
 import com.example.EmployeeManagementSystem.entity.Employee;
 import com.example.EmployeeManagementSystem.projection.EmployeeProjection;
 import com.example.EmployeeManagementSystem.repository.DepartmentRepository;

@@ -31,5 +31,7 @@ public class LibraryManagementApplication {
         System.out.println("Setter Injected BookRepository: " + bookServiceSetter.getBookRepository());
         System.out.println("Both beans share the same BookRepository singleton: " +
                 (bookServiceConstructor.getBookRepository() == bookServiceSetter.getBookRepository()));
+        
+        ((ClassPathXmlApplicationContext) context).close();
     }
 }

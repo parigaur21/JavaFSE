@@ -1,4 +1,4 @@
-# Week 5 Hands-On Assignments
+# Week 6 Hands-On Assignments
 
 ## 2. Git-HOL
 

@@ -16,13 +16,13 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Context (includes Beans, Core, Expression) -->
+        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        <!-- Spring AOP -->
+        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>

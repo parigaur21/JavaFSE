@@ -65,7 +65,7 @@ public class EmployeeController {
         }).orElse(ResponseEntity.notFound().build());
     }
 
-    // Custom endpoints
+    
     @GetMapping("/search/department")
     public List<Employee> getByDepartment(@RequestParam Long deptId) {
         return employeeRepository.findByDepartmentId(deptId);

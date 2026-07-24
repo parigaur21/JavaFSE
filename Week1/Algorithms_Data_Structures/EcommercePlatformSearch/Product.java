@@ -1,25 +1,18 @@
-/**
- * Product class representing a product on the e-commerce platform.
- * 
- * Attributes:
- * - productId   : Unique identifier for the product
- * - productName : Name of the product
- * - category    : Category the product belongs to
- */
+
 public class Product {
 
     private int productId;
     private String productName;
     private String category;
 
-    // Constructor
+    
     public Product(int productId, String productName, String category) {
         this.productId = productId;
         this.productName = productName;
         this.category = category;
     }
 
-    // Getters and Setters
+    
     public int getProductId() {
         return productId;
     }

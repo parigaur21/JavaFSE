@@ -1,9 +1,5 @@
 
-/**
- * Concrete implementation of Document for Word documents.
- * 
- * This is a Concrete Product in the Factory Method Pattern.
- */
+
 public class WordDocument implements Document {
 
     @Override

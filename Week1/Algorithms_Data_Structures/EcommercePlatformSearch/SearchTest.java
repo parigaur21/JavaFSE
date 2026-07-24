@@ -2,57 +2,14 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-/**
- * Test class for the E-commerce Platform Search Function.
- * 
- * Demonstrates and compares Linear Search and Binary Search algorithms
- * on a dataset of products.
- * 
- * ============================================================
- * ANALYSIS: COMPARING LINEAR SEARCH vs BINARY SEARCH
- * ============================================================
- * 
- * | Criteria          | Linear Search | Binary Search   |
- * |-------------------|---------------|-----------------|
- * | Time Complexity   | O(n)          | O(log n)        |
- * | Space Complexity  | O(1)          | O(1)            |
- * | Prerequisite      | None          | Array must be   |
- * |                   |               | SORTED           |
- * | Best Case         | O(1)          | O(1)            |
- * | Worst Case        | O(n)          | O(log n)        |
- * 
- * WHICH ALGORITHM IS MORE SUITABLE FOR AN E-COMMERCE PLATFORM?
- * 
- * Binary Search is more suitable for the e-commerce platform because:
- * 
- * 1. PERFORMANCE: With thousands or millions of products, binary search's
- *    O(log n) complexity vastly outperforms linear search's O(n).
- *    For 1,000,000 products: linear search may need up to 1,000,000
- *    comparisons, while binary search needs at most ~20 comparisons.
- * 
- * 2. SCALABILITY: As the product catalog grows, binary search maintains
- *    fast performance. Doubling the catalog size only adds one more
- *    comparison step in binary search, but doubles the work in linear.
- * 
- * 3. SORTED DATA: E-commerce products are typically stored in databases
- *    with indexed (sorted) fields like productId, making the sorted
- *    prerequisite of binary search naturally satisfied.
- * 
- * 4. USER EXPERIENCE: Faster search means quicker response times,
- *    leading to better customer satisfaction on the platform.
- * 
- * However, Linear Search is still useful when:
- * - The dataset is very small.
- * - The data is unsorted and sorting cost is not justified.
- * - Searching by non-indexed fields (e.g., product description).
- */
+
 public class SearchTest {
 
     public static void main(String[] args) {
 
         System.out.println("=== E-commerce Platform Search Function Test ===\n");
 
-        // --- Step 1: Create an array of products (unsorted) for Linear Search ---
+        
         Product[] productsUnsorted = {
             new Product(105, "Laptop",        "Electronics"),
             new Product(203, "Smartphone",    "Electronics"),
@@ -66,9 +23,9 @@ public class SearchTest {
             new Product(67,  "Sunglasses",    "Accessories")
         };
 
-        // --- Step 2: Create a sorted copy for Binary Search ---
+        
         Product[] productsSorted = Arrays.copyOf(productsUnsorted, productsUnsorted.length);
-        Arrays.sort(productsSorted, Comparator.comparingInt(Product::getProductId)); // Sorts by productId
+        Arrays.sort(productsSorted, Comparator.comparingInt(Product::getProductId)); 
 
         System.out.println("--- Products (Unsorted - for Linear Search) ---");
         for (Product p : productsUnsorted) {
@@ -80,7 +37,7 @@ public class SearchTest {
             System.out.println("  " + p);
         }
 
-        // --- Step 3: Perform Linear Search ---
+        
         int searchId1 = 78;
         System.out.println("\n========================================");
         System.out.println("LINEAR SEARCH for productId: " + searchId1);
@@ -97,7 +54,7 @@ public class SearchTest {
         }
         System.out.println("Time taken: " + (endTime - startTime) + " nanoseconds");
 
-        // --- Step 4: Perform Binary Search ---
+        
         int searchId2 = 78;
         System.out.println("\n========================================");
         System.out.println("BINARY SEARCH for productId: " + searchId2);
@@ -114,7 +71,7 @@ public class SearchTest {
         }
         System.out.println("Time taken: " + (endTime - startTime) + " nanoseconds");
 
-        // --- Step 5: Test searching for a product that does NOT exist ---
+        
         int searchId3 = 999;
         System.out.println("\n========================================");
         System.out.println("SEARCH for non-existent productId: " + searchId3);

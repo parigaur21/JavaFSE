@@ -1,9 +1,5 @@
 
-/**
- * Concrete implementation of Document for PDF documents.
- * 
- * This is a Concrete Product in the Factory Method Pattern.
- */
+
 public class PdfDocument implements Document {
 
     @Override

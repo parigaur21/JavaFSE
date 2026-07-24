@@ -35,7 +35,7 @@ public class AuthenticationController {
     }
 
     private String getUser(String authHeader) {
-        String encodedCredentials = authHeader.substring(6); // Remove "Basic "
+        String encodedCredentials = authHeader.substring(6); 
         byte[] decodedCredentials = Base64.getDecoder().decode(encodedCredentials);
         String credentials = new String(decodedCredentials, StandardCharsets.UTF_8);
         return credentials.split(":")[0];

@@ -1,6 +1,6 @@
-/* 2. CSS Syntax and Comments */
 
-/* Header styles */
+
+
 #mainHeader {
     background: linear-gradient(to right, #007BFF, #0056b3);
     color: white;
@@ -8,27 +8,27 @@
     text-align: center;
 }
 
-/* 3. Selectors Playground */
-/* Universal selector */
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Element selector */
+
 h2 {
     color: #333;
     background: linear-gradient(to right, #eee, #ddd);
     padding: 10px;
 }
 
-/* Grouping selector */
+
 h3, p {
     margin-bottom: 10px;
 }
 
-/* 4. Color & Background Styling */
+
 .eventCard {
     background-color: rgba(255, 255, 255, 0.9);
     color: #444;
@@ -37,7 +37,7 @@ h3, p {
     margin: 15px;
 }
 
-/* 5. Typography */
+
 .eventCard h3 {
     font-size: 1.5em;
     font-weight: 700;
@@ -51,13 +51,13 @@ h3, p {
     text-align: justify;
 }
 
-/* 6. Link and List Styling */
+
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     background-color: #333;
-    display: flex; /* 10. Responsive bonus */
+    display: flex; 
 }
 
 nav ul li {
@@ -73,7 +73,7 @@ nav ul li a:hover, nav ul li a:active {
     color: #007BFF;
 }
 
-/* 7. Table Styling */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -94,13 +94,13 @@ tr:nth-child(even) td {
     background-color: #f9f9f9;
 }
 
-/* 8. Box Model & Layout Control */
+
 .search-input {
     outline: 2px solid #007BFF;
     padding: 5px;
 }
 
-/* 9. Multiple Columns in Text */
+
 .news-article p {
     column-count: 2;
     column-gap: 30px;
@@ -108,7 +108,7 @@ tr:nth-child(even) td {
     padding: 20px;
 }
 
-/* 10. Responsive Web Design with Media Queries */
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;

@@ -1,9 +1,5 @@
 
-/**
- * Concrete implementation of Document for Excel documents.
- * 
- * This is a Concrete Product in the Factory Method Pattern.
- */
+
 public class ExcelDocument implements Document {
 
     @Override

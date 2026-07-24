@@ -14,21 +14,21 @@ import java.util.List;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
-    // Custom query method using keyword
+    
     List<Employee> findByDepartmentId(Long departmentId);
 
-    // Custom query method using @Query
+    
     @Query("SELECT e FROM Employee e WHERE e.name LIKE %:name%")
     List<Employee> findByNameContaining(@Param("name") String name);
 
-    // Named query defined in entity
+    
     List<Employee> findByEmailNamed(@Param("email") String email);
     List<Employee> findByDepartmentIdNamed(@Param("deptId") Long deptId);
 
-    // Pagination and sorting
+    
     Page<Employee> findAll(Pageable pageable);
 
-    // Projection
+    
     @Query("SELECT e FROM Employee e")
     List<EmployeeProjection> findAllEmployeeProjections();
 }

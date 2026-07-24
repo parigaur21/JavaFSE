@@ -1,7 +1,7 @@
 # Week 6 Hands-On Assignments
 
 ## 2. Git-HOL
-
+w
 Here is how we can ignore `.log` files and `log` folders in Git:
 
 1. **Create the files and folders:**

@@ -176,4 +176,3 @@ Steps for cleaning up and pushing back to the remote Git repository:
    ```
 5. Observe and verify on the remote server (e.g., GitHub/GitLab) that the changes are successfully reflected in the repository.
 
-ents, and mocking the NgRx store state.
